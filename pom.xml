@@ -167,10 +167,12 @@
       <groupId>com.idega.block.addon</groupId>
       <artifactId>com.idega.block.form</artifactId>
     </dependency>
+    <!-- 
     <dependency>
       <groupId>com.idega.block.addon</groupId>
       <artifactId>com.idega.block.formadmin</artifactId>
     </dependency>
+     -->
     <dependency>
       <groupId>com.idega.block.addon</groupId>
       <artifactId>com.idega.formbuilder</artifactId>
