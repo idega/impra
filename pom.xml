@@ -279,7 +279,7 @@
     <plugin>
       <groupId>org.codehaus.mojo</groupId>
       <artifactId>maven-buildnumber-plugin</artifactId>
-      <version>0.9.4</version>
+      <version>0.9.6</version>
       <configuration>
             <format>{0,date,yyyyMMdd.HHmmss}</format>
             <items>
