@@ -182,6 +182,12 @@
       <artifactId>org.jboss.jbpm</artifactId>
     </dependency>
     
+    <dependency>
+    	<groupId>com.idega.block.addon</groupId>
+		<artifactId>com.idega.block.beanshell</artifactId>
+    </dependency>
+    
+    
     <!-- egov modules -->  
     <dependency>
       <groupId>com.idega.block.egov</groupId>
