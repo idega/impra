@@ -224,16 +224,16 @@
   </dependencies>
 
   <distributionManagement>
-    <snapshotRepository>
-      <id>idega1snapshots</id>
-      <name>idega Maven2 Snapshot Repository</name>
-      <url>scp://repository.idega.com/var/www/webs/repository.idega.com/maven2</url>
-    </snapshotRepository>
     <repository>
       <id>idega1</id>
       <name>idega Maven2 Repository</name>
-      <url>scp://repository.idega.com/var/www/webs/repository.idega.com/maven2</url>
+      <url>file:///var/www/webs/repository.idega.com/maven2</url>
     </repository>
+    <site>
+      <id>idega1</id>
+      <name>idega Maven2 Documentation site</name>
+      <url>file:///var/www/webs/developer.idega.com/platform4/${groupId}/${artifactId}</url>
+    </site>
   </distributionManagement>
 
   <repositories>
@@ -266,11 +266,6 @@
           <url>http://repository.idega.com/maven2/</url>
           <!--snapshotPolicy>daily</snapshotPolicy-->
         </pluginRepository>
-        <!-- pluginRepository>
-            <id>tlc</id>
-            <name>TLC Repository</name>
-            <url>http://commons.ucalgary.ca/pub/m2</url>
-        </pluginRepository-->
     </pluginRepositories>
 
   <build>
