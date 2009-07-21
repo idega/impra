@@ -213,18 +213,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/ma
       <groupId>com.idega.block.egov</groupId>
       <artifactId>is.idega.idegaweb.egov.impra</artifactId>
     </dependency>
-    <dependency>
-      <groupId>com.idega.block.egov</groupId>
-      <artifactId>is.idega.idegaweb.egov.parking</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.idega.block.egov</groupId>
-      <artifactId>is.idega.idegaweb.egov.nest</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.idega.block.egov</groupId>
-      <artifactId>is.idega.idegaweb.egov.propertytax</artifactId>
-    </dependency>
+   
     
 	<dependency>
       <groupId>com.idega.block.egov</groupId>
