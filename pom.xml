@@ -127,10 +127,6 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/ma
     <!--  ADDON STUFF -->
     <dependency>
       <groupId>com.idega.block.addon</groupId>
-      <artifactId>com.idega.block.cal</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.idega.block.addon</groupId>
       <artifactId>com.idega.block.elight</artifactId>
     </dependency>
     <dependency>
@@ -174,6 +170,12 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/ma
     <dependency>
       <groupId>com.idega.block.egov</groupId>
       <artifactId>is.idega.idegaweb.egov.citizen</artifactId>
+      <exclusions>
+      	<exclusion>
+      		<artifactId>com.idega.block.cal</artifactId>
+      		<groupId>com.idega.block.addon</groupId>
+      	</exclusion>
+      </exclusions>
     </dependency>
     <dependency>
       <groupId>com.idega.block.egov</groupId>
