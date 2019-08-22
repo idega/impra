@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?> <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+<?xml version="1.0" encoding="UTF-8"?> <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
@@ -16,7 +16,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/ma
     <name>idega software</name>
     <url>http://www.idega.com/</url>
   </organization>
-  
+
   <dependencies>
     <!-- ePlatform bundles -->
     <dependency>
@@ -123,7 +123,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/ma
       <groupId>com.idega.block.platform</groupId>
       <artifactId>com.idega.block.media</artifactId>
     </dependency>
-    
+
     <!--  ADDON STUFF -->
     <dependency>
       <groupId>com.idega.block.addon</groupId>
@@ -165,8 +165,8 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/ma
     	<groupId>com.idega.block.addon</groupId>
 		<artifactId>com.idega.block.cal</artifactId>
     </dependency>
-    
-    <!-- egov modules -->  
+
+    <!-- egov modules -->
     <dependency>
       <groupId>com.idega.block.egov</groupId>
       <artifactId>is.idega.idegaweb.egov.cases</artifactId>
@@ -201,109 +201,87 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/ma
       <groupId>com.idega.block.egov</groupId>
       <artifactId>is.idega.idegaweb.egov.xformscase</artifactId>
     </dependency>
-    
+
     <!-- Private dependencies -->
     <dependency>
       <groupId>com.idega.block.private</groupId>
       <artifactId>is.idega.idegaweb.egov.impra</artifactId>
     </dependency>
-    
+
   </dependencies>
 
-  <distributionManagement>
-    <repository>
-      <id>idega1</id>
-      <name>idega Maven2 Repository</name>
-      <url>file:///var/www/webs/repository.idega.com/maven2</url>
-    </repository>
-    <site>
-      <id>idega1</id>
-      <name>idega Maven2 Documentation site</name>
-      <url>file:///var/www/webs/developer.idega.com/platform4/${groupId}/${artifactId}</url>
-    </site>
-  </distributionManagement>
-
-  <repositories>
-    <repository>
-      <id>idega1</id>
-      <name>idega maven2 repository</name>
-      <url>http://repository.idega.com/maven2/</url>
-      <!--snapshotPolicy>daily</snapshotPolicy-->
-    </repository>
-    <repository>
-      <id>idega2</id>
-      <name>idega public repository</name>
-      <url>http://repository.idega.com/maven/</url>
-      <!--snapshotPolicy>daily</snapshotPolicy-->
-      <layout>legacy</layout>
-    </repository>
-      <repository>
-      <id>java.net</id>
-      <name>Sun Java Net Maven Repository</name>
-      <url>https://maven-repository.dev.java.net/nonav/repository/</url>
-      <!--snapshotPolicy>daily</snapshotPolicy-->
-      <layout>legacy</layout>
-    </repository>
-  </repositories>
-
-    <pluginRepositories>
-        <pluginRepository>
-          <id>idega1</id>
-          <name>idega maven2 repository</name>
-          <url>http://repository.idega.com/maven2/</url>
-          <!--snapshotPolicy>daily</snapshotPolicy-->
-        </pluginRepository>
-    </pluginRepositories>
-
-  <build>
-		<plugins>
-
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>buildnumber-maven-plugin</artifactId>
-				<version>1.0-beta-2</version>
-				<configuration>
-					<format>{0,date,yyyyMMdd.HHmmss}</format>
-					<items>
-						<item>timestamp</item>
-					</items>
-				</configuration>
-				<executions>
-					<execution>
-						<phase>validate</phase>
-						<goals>
-							<goal>create</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-
-			<plugin>
-				<groupId>com.idega.maven.plugins</groupId>
-				<artifactId>com.idega.maven.webapp</artifactId>
-				<extensions>true</extensions>
-				<configuration>
-					<extractResources>true</extractResources>
-					<webResources>
-						<resource>
-							<directory>resources</directory>
-							<targetPath>resources</targetPath>
-						</resource>
-					</webResources>
-					<archive>
-						<manifest>
-							<!--addClasspath>true</addClasspath-->
-							<addExtensions />
-						</manifest>
-						<manifestEntries>
-							<!--Implementation-Vendor>${pom.organization.name}</Implementation-Vendor-->
-							<Implementation-Vendor-Url>${pom.organization.url}</Implementation-Vendor-Url>
-							<Implementation-Build>${buildNumber}</Implementation-Build>
-							<Implementation-InceptionYear>${pom.inceptionYear}</Implementation-InceptionYear>
-						</manifestEntries>
-					</archive>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
+ <distributionManagement>
+   <repository>
+     <id>idega1</id>
+     <name>idega Maven2 Repository</name>
+     <url>file:///var/www/webs/repository.idega.com/maven2</url>
+   </repository>
+   <site>
+     <id>idega1</id>
+     <name>idega Maven2 Documentation site</name>
+     <url>file:///var/www/webs/developer.idega.com/platform4/${groupId}/${artifactId}</url>
+   </site>
+ </distributionManagement>
+ <pluginRepositories>
+   <pluginRepository>
+     <id>idega1</id>
+     <name>idega maven2 repository</name>
+     <url>http://repository.idega.com/maven2/</url>
+     <!--snapshotPolicy>daily</snapshotPolicy -->
+   </pluginRepository>
+ </pluginRepositories>
+ <build>
+   <plugins>
+     <plugin>
+       <groupId>org.codehaus.mojo</groupId>
+       <artifactId>buildnumber-maven-plugin</artifactId>
+       <version>1.0-beta-2</version>
+       <configuration>
+         <format>{0,date,yyyyMMdd.HHmmss}</format>
+         <items>
+           <item>timestamp</item>
+         </items>
+       </configuration>
+       <executions>
+         <execution>
+           <phase>validate</phase>
+           <goals>
+             <goal>create</goal>
+           </goals>
+         </execution>
+       </executions>
+     </plugin>
+     <plugin>
+       <groupId>org.apache.maven.plugins</groupId>
+       <artifactId>maven-surefire-plugin</artifactId>
+       <version>2.17</version>
+     </plugin>
+     <plugin>
+       <groupId>com.idega.maven.plugins</groupId>
+       <artifactId>com.idega.maven.webapp</artifactId>
+       <extensions>true</extensions>
+       <configuration>
+         <extractResources>true</extractResources>
+         <webResources>
+           <resource>
+             <directory>resources</directory>
+             <targetPath>resources</targetPath>
+           </resource>
+         </webResources>
+         <archive>
+           <manifest>
+             <!--addClasspath>true</addClasspath -->
+             <addExtensions />
+           </manifest>
+           <manifestEntries>
+             <!--Implementation-Vendor>${pom.organization.name}</Implementation-Vendor -->
+             <Implementation-Vendor-Url>${pom.organization.url}</Implementation-Vendor-Url>
+             <Implementation-Build>${buildNumber}</Implementation-Build>
+             <Implementation-InceptionYear>${pom.inceptionYear}</Implementation-InceptionYear>
+           </manifestEntries>
+         </archive>
+       </configuration>
+     </plugin>
+   </plugins>
+ </build>
 </project>
